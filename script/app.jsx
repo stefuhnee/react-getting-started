@@ -1,7 +1,7 @@
 'use strict';
 
-const React = require('react');
-const ReactDOM = require('react-dome');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 var Counter = React.createClass({
   incrementCount: function() {
@@ -15,13 +15,13 @@ var Counter = React.createClass({
     }
   },
   render: function() {
-    return {
-      <div class="my-component">
+    return (
+      <div className="my-component">
         <h1>Count: {this.state.count}</h1>
-        <button type="button" onClick={this.incrementCount}>Increment Count</button>
+        <button type="button" onClick={this.incrementCount}>Increment</button>
       </div>
-    };
+    );
   }
-});
+})
 
 ReactDOM.render(<Counter/>, document.getElementById('mount-point'));
